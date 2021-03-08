@@ -8,7 +8,7 @@
    
     "icons (ícones que vão ser utilizados na tela inicial do seu celular)": [{
     "src": "images/top.png",
-    "sizes": "72x72",
+    "sizes": "144x144",
     "type": "image/png"
     }
 ]
