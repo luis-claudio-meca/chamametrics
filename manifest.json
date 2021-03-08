@@ -1,0 +1,15 @@
+{
+    "name": "Chama Metrics" , 
+    "background_color": "#fff", 
+    "display": "standalone",
+    "orientation": "portrait",
+    "Scope": "/",
+    "start_url": "http://localhost:3000/",
+   
+    "icons (ícones que vão ser utilizados na tela inicial do seu celular)": [{
+    "src": "images/top.png",
+    "sizes": "72x72",
+    "type": "image/png"
+    }
+]
+    }
