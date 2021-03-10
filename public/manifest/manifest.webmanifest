@@ -3,9 +3,9 @@
     "background_color": "#585857",
     "display": "standalone",
     "scope": "/",
-    "start_url": "http://localhost:3000/",
+    "start_url": "https://chamametrics.vercel.app/",
     "name": "Chama Metrics",
-    "short_name": "Metrics",
+    "short_name": " Chama Metrics",
     "icons": [
         {
             "src": "/manifest/icon-192x192.png",
