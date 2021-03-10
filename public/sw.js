@@ -1,8 +1,10 @@
-var CACHE_NAME = 'otimigas-app';
+var CACHE_NAME = 'chama-app';
 
 var urlsToCache = [
     '/',
-    '/favicon.ico'
+    '/favicon.ico',
+    '/images/chama.jpg',
+    '/images/search.png'
 ];
 
 self.addEventListener('install', function (event) {
