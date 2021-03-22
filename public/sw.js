@@ -1,7 +1,6 @@
 var CACHE_NAME = 'chama-app';
 
 var urlsToCache = [
-    '/',
     '/favicon.ico',
     '/images/chama.jpg',
     '/images/search.png'
