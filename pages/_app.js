@@ -1,9 +1,11 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {useEffect} from 'react'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
+    /*
     if("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
        navigator.serviceWorker.register("/sw.js").then(
@@ -15,7 +17,7 @@ function MyApp({ Component, pageProps }) {
           }
         );
       });
-    }
+    }*/
   }, [])
 
   return <Component {...pageProps} />

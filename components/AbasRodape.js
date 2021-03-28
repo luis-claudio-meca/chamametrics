@@ -4,11 +4,8 @@ import { faTachometerAlt, faCalendarPlus, faUser } from '@fortawesome/free-solid
 import Link from 'next/link';
 
 
-
-
-
-
 export default function AbasRodape() {
+      
     const dashClick = () => {
         let i;
         var botoes = document.getElementsByTagName('a')
@@ -41,7 +38,6 @@ export default function AbasRodape() {
        }
         
     }
-
 
     return (
         <div>
@@ -85,5 +81,6 @@ export default function AbasRodape() {
             <Link href="/User">user</Link>
             </div>
         </div>
-    )
+    );
+
 }

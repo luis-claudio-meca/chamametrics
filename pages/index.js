@@ -3,7 +3,6 @@ import  Head  from 'next/head';
 import AbasRodape from '../components/AbasRodape';
 import { Container, Jumbotron } from 'react-bootstrap';
 
-
 export default function Home() {
   return (
     <div>
