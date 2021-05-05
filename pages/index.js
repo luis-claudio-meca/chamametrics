@@ -64,10 +64,10 @@ export default function Home() {
 
 
     return (<div>
-        <Head >
-            <link rel="manifest"
-                href="/manifest/manifest.webmanifest" />
-        </Head>
+        <Head>
+                <link rel="manifest" href="/manifest/manifest.webmanifest" />
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> 
+            </Head>
         <Cabecalho />
 
         <Container style={{ margin: '1.75rem auto' }} >

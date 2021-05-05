@@ -67,6 +67,7 @@ export default function Input() {
         <div>
             <Head>
                 <link rel="manifest" href="/manifest/manifest.webmanifest" />
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> 
             </Head>
             <Cabecalho />
             <h3 className="text-center" style={{ color: 'yellow' }}>Relatórios</h3>
