@@ -8,15 +8,16 @@ import $ from 'jquery';
 
 export default function Visitantes() {
     function Dados(){
-        axios.get("http://localhost:3003/culto/geral")
+        axios.get("http://93.188.165.41/API-ChamaMetrics/all")
           .then(res => {
             const geral = res.data;
-                Hoje(geral.geral);
-                EssaSemana(geral.geral);
-                LastSemana(geral.geral);
-                UltimoLastSemana(geral.geral);
-                UltimoMes(geral.geral);
-                TotalMes(geral.geral);
+         
+                Hoje(geral);
+                EssaSemana(geral);
+                LastSemana(geral);
+                UltimoLastSemana(geral);
+                UltimoMes(geral);
+                TotalMes(geral);
           })
     }
     Dados();
@@ -40,11 +41,12 @@ export default function Visitantes() {
 
         let conthj =0;
         data.forEach(element=>{
+        
             if(element.data == hj)
-                if(element.visitantes>0)
-                conthj+=element.visitantes; 
+                conthj+= +element.visitantes; 
+                
         })
-        $("#hj").html(conthj);
+        $("#hj").html( conthj );
     }
 
     function EssaSemana(data){
@@ -63,8 +65,7 @@ export default function Visitantes() {
         
             data.forEach(element=>{
                 if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-                if(element.visitantes>0)
-                    cont+=element.visitantes; 
+                    cont+= +element.visitantes; 
             })
     }
        $("#weektotal").html( cont );
@@ -89,8 +90,7 @@ export default function Visitantes() {
            
 
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-               if(element.visitantes>0)
-                  cont+=element.visitantes;
+                  cont+= +element.visitantes;
 
           })
           first = newcurr.getDate() - newcurr.getDay();
@@ -115,8 +115,7 @@ export default function Visitantes() {
            data.forEach(element=>{
            
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-               if(element.visitantes>0)
-                  cont=element.visitantes;
+                  cont=+element.visitantes;
 
           })
           if(cont)
@@ -140,11 +139,11 @@ export default function Visitantes() {
         for(let i=0;i<7;i++){
 
             lastday = new Date(curr.setDate(firstday.getDate())).toUTCString();
+        
            data.forEach(element=>{
            
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-               if(element.visitantes>0)
-                  cont=element.visitantes;
+                  cont= +element.visitantes;
 
           })
           if(cont)
@@ -161,8 +160,7 @@ export default function Visitantes() {
         
            data.forEach(element=>{
                if(new Date(element.data).getMonth() == curr.getMonth() && new Date(element.data).getFullYear() == curr.getFullYear() );
-               if(element.visitantes>0)
-                  cont+=element.visitantes;
+                  cont+= +element.visitantes;
           })      
          
       $("#totalmounth").html( cont );

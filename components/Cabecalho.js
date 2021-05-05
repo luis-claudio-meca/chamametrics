@@ -38,7 +38,7 @@ const Cabecalho = (props) => {
                         <Link href="/Voluntarios">Voluntários</Link>
                         <Link href="/Criancas">Crianças</Link>
                         <Link href="/Decididos">Decididos</Link>
-                        <Link href="/Launch">Launch</Link>
+                        <Link href="/Launch">Conection</Link>
                     </Nav>
                     </Container>
                 </Navbar.Collapse>

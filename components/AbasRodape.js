@@ -76,7 +76,7 @@ export default function AbasRodape() {
                 </Button>
             </ButtonGroup>
             <div style={{display: 'none'}}>
-            <Link href="/Frequentadores">dashboard</Link>
+            <Link href="/">dashboard</Link>
             <Link href="/Input">input</Link>
             <Link href="/User">user</Link>
             </div>

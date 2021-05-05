@@ -9,16 +9,17 @@ import $ from 'jquery';
 
 export default function Criancas() {
 
-  function Dados(){
-        axios.get("http://localhost:3003/culto/geral")
+    function Dados(){
+        axios.get("http://93.188.165.41/API-ChamaMetrics/all")
           .then(res => {
             const geral = res.data;
-                Hoje(geral.geral);
-                EssaSemana(geral.geral);
-                LastSemana(geral.geral);
-                UltimoLastSemana(geral.geral);
-                UltimoMes(geral.geral);
-                TotalMes(geral.geral);
+          
+                Hoje(geral);
+                EssaSemana(geral);
+                LastSemana(geral);
+                UltimoLastSemana(geral);
+                UltimoMes(geral);
+                TotalMes(geral);
           })
     }
     Dados();
@@ -42,8 +43,10 @@ export default function Criancas() {
 
         let conthj =0;
         data.forEach(element=>{
+      
             if(element.data == hj)
-                conthj+=element.criancas; 
+                conthj+= +element.criancas; 
+                
         })
         $("#hj").html( conthj );
     }
@@ -64,7 +67,7 @@ export default function Criancas() {
         
             data.forEach(element=>{
                 if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-                    cont+=element.criancas; 
+                    cont+= +element.criancas; 
             })
     }
        $("#weektotal").html( cont );
@@ -89,7 +92,7 @@ export default function Criancas() {
            
 
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-                  cont+=element.criancas;
+                  cont+= +element.criancas;
 
           })
           first = newcurr.getDate() - newcurr.getDay();
@@ -114,7 +117,7 @@ export default function Criancas() {
            data.forEach(element=>{
            
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-                  cont=element.criancas;
+                  cont=+element.criancas;
 
           })
           if(cont)
@@ -138,11 +141,10 @@ export default function Criancas() {
         for(let i=0;i<7;i++){
 
             lastday = new Date(curr.setDate(firstday.getDate())).toUTCString();
-            console.log(lastday.substr(0, 16))
            data.forEach(element=>{
            
                if(new Date(element.data).toUTCString().substr(0, 16) == lastday.substr(0, 16))
-                  cont=element.criancas;
+                  cont= +element.criancas;
 
           })
           if(cont)
@@ -159,7 +161,7 @@ export default function Criancas() {
         
            data.forEach(element=>{
                if(new Date(element.data).getMonth() == curr.getMonth() && new Date(element.data).getFullYear() == curr.getFullYear() );
-                  cont+=element.criancas;
+                  cont+= +element.criancas;
           })      
          
       $("#totalmounth").html( cont );

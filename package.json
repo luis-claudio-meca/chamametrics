@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "run dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",

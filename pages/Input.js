@@ -35,7 +35,7 @@ export default function Input() {
 
             $.ajax({
                 method: "POST",
-                url: "http://localhost:3003/culto/register",
+                url: "http://93.188.165.41/API-ChamaMetrics/create",
                 data: obj,
                 success: function () {
 
@@ -48,7 +48,15 @@ export default function Input() {
                 timer: 3000,
                 showConfirmButton: false,
             }).then(() => {
-                location.href="/Input";
+                document.getElementById("frequentadores").value = ''
+                document.getElementById("visitantes").value = ''
+                document.getElementById("voluntarios").value = ''
+                document.getElementById("criancas").value = ''
+                document.getElementById("decididos").value = ''
+                document.getElementById("launch").value = ''
+                document.getElementById("data").value = ''
+                document.getElementById("evento").value = ''
+
             })
         }
 
@@ -96,7 +104,7 @@ export default function Input() {
                     </InputGroup>
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
-                            <InputGroup.Text >Launch</InputGroup.Text>
+                            <InputGroup.Text >Conection</InputGroup.Text>
                         </InputGroup.Prepend>
                         <input type="number" class="form-control" id="launch" />
                     </InputGroup>
