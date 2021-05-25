@@ -35,7 +35,7 @@ export default function Input() {
 
             $.ajax({
                 method: "POST",
-                url: "http://93.188.165.41/API-ChamaMetrics/create",
+                url: "https://chamachurch.com/API-ChamaMetrics/create",
                 data: obj,
                 success: function () {
 

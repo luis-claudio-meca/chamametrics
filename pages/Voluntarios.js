@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 export default function Voluntarios() {
     function Dados(){
-        axios.get("http://93.188.165.41/API-ChamaMetrics/all")
+        axios.get("https://chamachurch.com/API-ChamaMetrics/all")
           .then(res => {
             const geral = res.data;
          
@@ -59,9 +59,8 @@ export default function Voluntarios() {
 
         firstday = new Date(curr.setDate(first)).toUTCString();
         for(let i=0;i<7;i++){
-         
-         
-        lastday = new Date(curr.setDate(curr.getDate()+i)).toUTCString();
+
+            lastday = new Date(curr.setDate(curr.getDate() + i)).toUTCString();
         
             data.forEach(element=>{
                

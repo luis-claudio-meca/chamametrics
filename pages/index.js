@@ -32,7 +32,7 @@ export default function Home() {
             let dado = document.getElementById("data");
             
             $.ajax({
-                url: "http://93.188.165.41/API-ChamaMetrics/relatorio",
+                url: "https://chamachurch.com/API-ChamaMetrics/relatorio",
                 method: "post",
                 data : {data : dado.value},
                 dataType: "JSON",     

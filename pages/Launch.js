@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 export default function Launch() {
     function Dados(){
-        axios.get("http://93.188.165.41/API-ChamaMetrics/all")
+        axios.get("https://chamachurch.com/API-ChamaMetrics/all")
           .then(res => {
             const geral = res.data;
         
